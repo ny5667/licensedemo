@@ -1,0 +1,1 @@
+C:\Users\ludunyue\Downloads\jdk-17_windows-x64_bin\jdk-17.0.8\bin\java -jar licensedemo-0.0.1-SNAPSHOT.jar

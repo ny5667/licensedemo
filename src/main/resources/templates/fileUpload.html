@@ -1,0 +1,26 @@
+<head>
+    <title>
+        代码高亮示例
+    </title>
+    <!-- 引入 Prism.js 及其相关样式 -->
+    <link th:href="@{/assets/css/prism.min.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/assets/js/prism.min.js}">
+    </script>
+    <!-- 引入 Java 语言扩展文件 -->
+    <script type="text/javascript" th:src="@{/assets/js/prism-java.min.js}">
+    </script>
+</head>
+<form action="demo" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="上传并解压缩">
+</form>
+
+<div th:if="${message}">
+  <pre>
+<code class="language-java" th:text="${message}" />
+  </pre>
+</div>
+<script>
+    // 初始化 Prism.js
+    Prism.highlightAll();
+</script>

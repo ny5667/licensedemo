@@ -1,1 +1,1 @@
-# licensedemo
+[http://localhost:8082/demo](http://localhost:8082/demo)
