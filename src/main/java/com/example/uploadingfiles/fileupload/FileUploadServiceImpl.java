@@ -38,8 +38,7 @@ public class FileUploadServiceImpl implements FileUploadService {
         try {
             extractZipFile(new File(tempDir, tempFileName + ".zip"), extractFolder);
         } catch (IOException e) {
-            e.printStackTrace();
-            return "处理文件上传时发生错误";
+            throw new StorageFileNotFoundException("文件解压报错",e);
         }
 
         // 查找文件路径

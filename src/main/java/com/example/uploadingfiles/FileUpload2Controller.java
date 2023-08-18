@@ -23,18 +23,18 @@ public class FileUpload2Controller {
         this.fileUploadService = fileUploadService;
     }
 
-    @GetMapping("/demo")
+    @GetMapping("/")
     public String listUploadedFiles(Model model) throws IOException {
         return "fileUpload";
     }
 
-    @PostMapping("/demo")
+    @PostMapping("/")
     public String fileUpload(@RequestParam("file") MultipartFile file,
                              RedirectAttributes redirectAttributes) {
         String fileContent = fileUploadService.fileUpload(file);
         redirectAttributes.addFlashAttribute("message",
                 fileContent);
-        return "redirect:/demo";
+        return "redirect:/";
     }
 
 }
